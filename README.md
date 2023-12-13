@@ -1,0 +1,2 @@
+# simple_news_crawler
+運用簡單的爬蟲爬取各大新聞網的頭條新聞
