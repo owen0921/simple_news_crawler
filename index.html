@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" type="text/css" href="static/test.css">
+</head>
+<body>
+    <h5>讓你輕鬆了解社會趨勢</h5>
+
+    <p class="slogan">新聞爬蟲</p>
+
+    <form method="post">
+        <label for="url">選擇新聞網站:</label>
+        <select name="website">
+            <option value="https://udn.com/news/index">聯合新聞網</option>
+            <option value="https://news.ltn.com.tw/list/breakingnews/popular">自由時報</option>
+            <option value="https://news.tvbs.com.tw/">TVBS新聞</option>
+            <option value="https://www.ettoday.net/news/hot-news.htm">ETtoday新聞雲</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button type="submit">確認</button>
+    </form>
+
+    {% if result %}
+        {% if result.error %}
+        <p>{{ result.error }}</p>
+        {% else %}
+
+            <h2 style="text-align:center;">{{ result.website_name }} 頭條新聞:</h2>
+            <ul >
+                {% for index in range(result.titles|length) %}
+                    <li>
+                        <a href="{{ result.links[index] }}" target="_blank" style="text-decoration:none;">{{ result.titles[index] }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

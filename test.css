@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color:#F7EDE2;
+    /* background-image: url('123.jpg'); 背景圖片的路徑 */
+    background-size: cover; /* 等比例拉伸以覆蓋整個屏幕 */
+    background-position: center; /* 將背景圖片置中 */
+    background-repeat: no-repeat; /* 不重複顯示背景圖片 */
+}
+
+h5 {
+    font-size: 50px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, button {
+    padding: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align:center;
+}
+
+li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+
+}
+
+/* Optional: Hover effect on list items */
+li:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    background-color: #BDB76B;
+    border-color: #BDB76B;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #BDB76B
+}
+
+.slogan {
+    text-align: center;
+    font-size: 20px;
+    color: #777;
+    margin-top: 0;
+}
+
